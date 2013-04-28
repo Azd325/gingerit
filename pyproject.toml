@@ -1,0 +1,64 @@
+[tool.poetry]
+name = "gingerit"
+version = "0.10.0"
+description = """
+Correcting spelling and grammar mistakes based on the context of complete \
+entences. Wrapper around the gingersoftware.com API\
+"""
+authors = ["Tim Kleinschmdit <tim.kleinschmidt@gmail.com>"]
+license = "MIT"
+homepage = "https://github.com/Azd325/gingerit"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+
+[tool.poetry.dependencies]
+python = ">=3.7,<4"
+requests = "*"
+
+[tool.poetry.group.test.dependencies]
+pytest = "*"
+pytest-cov = "*"
+
+[tool.poetry.group.develop.dependencies]
+black = "*"
+ruff = "*"
+
+[tool.ruff]
+select = [
+    "E",    # pycodestyle
+    "W",    # pycodestyle
+    "F",    # pyflakes
+    "UP",   # pyupgrade
+    "C90",  # mccabe
+    "N",    # pep8-naming
+    "FBT",  # flake8-boolean-trap
+    "B",    # flake8-bugbear
+    "A",    # flake8-builtins
+    "C4",   # flake8-comprehensions
+    "PIE",  # flake8-pie
+    "PT",   # flake8-pytest-style
+    "RET",  # flake8-return
+    "SIM",  # flake8-simplify
+    "PTH",  # flake8-use-pathlib
+    "PL",   # pylint
+    "FLY",  # flynt
+    "RUF",  # ruff
+    "I"     # isort
+]
+ignore = [
+    "E501" # line too long
+]
