@@ -36,9 +36,7 @@ class GingerIt:
 
     @staticmethod
     def _change_char(original_text, from_position, to_position, change_with):
-        return "{}{}{}".format(
-            original_text[:from_position], change_with, original_text[to_position + 1 :]
-        )
+        return f"{original_text[:from_position]}{change_with}{original_text[to_position + 1 :]}"
 
     def _process_data(self, text, data):
         result = text
