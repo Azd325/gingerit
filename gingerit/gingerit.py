@@ -1,6 +1,9 @@
+import logging
 import os
 
 import requests
+
+log = logging.getLogger(__name__)
 
 URL = "https://ginger4.p.rapidapi.com/correction"
 GINGER_IT_API_KEY = os.getenv("GINGER_IT_API_KEY")
@@ -42,9 +45,6 @@ class GingerIt:
         result = text
         corrections = []
 
-        import logging
-
-        log = logging.getLogger(__name__)
         log.error(data)
 
         for suggestion in reversed(data["GingerTheDocumentResult"]["Corrections"]):
