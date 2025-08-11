@@ -8,7 +8,7 @@ from gingerit.gingerit import GingerIt
 @pytest.fixture(autouse=True)
 def _slow_down_tests_for_api():
     # API has a rate limit of 1 request per second
-    yield
+    # Wait before each test to ensure rate limiting compliance
     time.sleep(1)
 
 
