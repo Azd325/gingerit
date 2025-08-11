@@ -30,7 +30,7 @@ test = [
     "pytest-cov",
 ]
 develop = [
-    "ruff==0.12.7",
+    "ruff==0.12.8",
 ]
 
 
